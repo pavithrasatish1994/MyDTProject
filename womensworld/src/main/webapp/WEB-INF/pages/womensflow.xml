@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+		http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+	<var name="shipping" class="com.niit.womensworld_back.model.Userdetails" />
+	<var name="res" class="java.lang.String" />
+
+	<on-start>
+		<evaluate expression="flowHandler.initFlow()" result="flowScope.userdetails" />
+	</on-start>
+
+	<!-- <view-state id="checkout" view="shipping_details.jsp" model="flowScope.userdetails">
+		<transition on="Proceed" to="validate" />
+	</view-state> -->
+
+<view-state id="checkout" view="shipping_details.jsp" model="shipping">
+	<transition on="Proceed" to="cD" />
+		<transition on="error" to="err" />
+		</view-state>
+		
+	<view-state id="cD" view="confirmDetails.jsp" model="shipping">
+		<transition on="edit" to="checkout2" />
+		<transition on="submit" to="pay" />
+	</view-state>
+
+	<view-state id="pay" view="payment_details.jsp" model="shipping">
+<!-- 		<transition on="edit" to="checkout2" /> -->
+		<transition on="submit" to="lastpage" />
+	</view-state>
+	
+	
+	<view-state id="lastpage" view="success_page.jsp" model="success">
+		<transition on="edit" to="checkout2" />
+		<transition on="submit" to="lastpage" />
+	</view-state>
+	
+
+	<view-state id="checkout2" view="shipping_details.jsp" model="userdetails">
+		<transition on="Proceed" to="validate" />
+	</view-state>
+
+	<action-state id="doit">
+		<evaluate expression="HomeController.success()" result="res" />
+		<transition on="success" to="success" />
+		<transition on="error" to="err" />
+	</action-state>
+
+	<end-state id="success" view="success_page.jsp" />
+
+	<end-state id="toHome" view="externalRedirect:contextRelative:index.jsp" />
+
+	<end-state id="err" view="buy" />
+</flow> 

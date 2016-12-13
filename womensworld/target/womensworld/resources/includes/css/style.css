@@ -1,0 +1,142 @@
+
+.xyz{
+      
+     margin-top: 15px;
+      
+     
+}
+.admin{
+	margin-top:80px;
+}
+.drop{
+      
+       margin-top:15px;
+       margin-left:170px;
+       
+}
+.a{
+    
+    background-size:cover;
+    height:500px!important;
+    width:100%;
+    
+}
+.space{
+    top:-19px;
+}     
+  
+
+.b{
+    height:250px;
+    width:250px;
+}
+
+.c{
+    height:750px;
+    width:750px;
+   }
+
+
+
+.col{
+    
+    background-color:#CACFD2;
+    
+}
+.colbody{
+    /*#F2F3F4;*/
+    background-color:#F2F3F4;
+    margin-top:-30px  ;
+    padding:40px; 
+}
+.down{
+    right:10px;
+    top: 15px;
+}
+
+
+.abcd{
+     transform: translateX(0%)translateY(-20%);
+      margin:8em auto;
+       height:50vh auto;
+       width:60%;
+       border-radius:30px;
+       padding:50px;
+       background-color:#F2F3F4;
+}
+
+.abcd1{
+     transform: translateX(0%)translateY(-10%);
+      margin:12em auto;
+       height:75vh auto;
+       width:55%;
+       border-radius:20px;
+       padding:5px;
+       background-color:#F2F3F4;
+       
+}
+
+.abcdcart{
+     transform: translateX(0%)translateY(-10%);
+      margin:6em auto;
+       height:450px;
+       width:55%;
+       border-radius:20px;
+       padding:15px;
+       background-color:#F2F3F4;
+}
+.abcdpay{
+     transform: translateX(0%)translateY(-10%);
+      margin:8em auto;
+       height:500px;
+       width:25%;
+       border-radius:20px;
+       padding:15px;
+       background-color:#F2F3F4;
+}
+.image{
+	margin-top:-20px;
+	background-color:#F2F3F4;
+
+}
+.foot{
+	margin-top:-30px;
+}
+
+header {
+  height: 100vh;
+ background-image: url(../img/image.jpg);  
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+p {
+  width: 600px;
+  margin: 0 auto 20px;
+}
+
+
+
+.a{
+	top:200px;
+}
+
